@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='snpProject',
-    version='',
+    version='0.0',
     packages=[''],
     url='',
     license='',
