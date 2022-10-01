@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="workspace commit on private">
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="setup commit">
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProject/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProject/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsvscript.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Setup Script" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -51,7 +58,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664446605710</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="setup commit">
+      <created>1664447160446</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664447160447</updated>
+    </task>
+    <task id="LOCAL-00003" summary="setup commit">
+      <created>1664447267876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664447267876</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -79,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="workspace commit on private" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace commit on private" />
+    <MESSAGE value="setup commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup commit" />
   </component>
 </project>
