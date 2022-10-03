@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="setup commit">
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProject/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProject/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsvscript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="tsv script test">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ubuntu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/inserting_trait.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snppage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/testinsertion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsvscript.py" beforeDir="false" afterPath="$PROJECT_DIR$/tsvscript.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +46,16 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/ubuntu/snpProject"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/ubuntu/snpProject/snpProject",
+    "settings.editor.selected.configurable": "cn.aprilviolet.highlightbracketpair.AppSettingsConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/snpProject" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664447267876</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tsv script test">
+      <created>1664614488376</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664614488376</updated>
+    </task>
+    <task id="LOCAL-00005" summary="tsv script test">
+      <created>1664614498195</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664614498195</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +129,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="workspace commit on private" />
     <MESSAGE value="setup commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup commit" />
+    <MESSAGE value="tsv script test" />
+    <option name="LAST_COMMIT_MESSAGE" value="tsv script test" />
   </component>
 </project>

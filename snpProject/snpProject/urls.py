@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from snpProjectDB.views import homepage, snppage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', homepage),
+    path('snpsearch', snppage)
 ]

@@ -30,6 +30,7 @@ next_line_split = next_line.split('\t')
 print(next_line_split)
 for index in indexes_SNP_table:
     print(next_line_split[index])
+print('"'+'","'.join([next_line_split[i] for i in indexes_Reference_table])+'"')
 # for index in indexes_DiseaseTrait_table:
 #     print(next_line_split[index])
 # for index in indexes_Reference_table:
