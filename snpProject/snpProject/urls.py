@@ -19,7 +19,7 @@ from snpProjectDB.views import homepage, snppage, DiseasesListView, show_disease
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homepage),
+    path('', homepage, name = "home"),
     path('snpsearch', snppage, name = "snpsearch"),
     path('diseaseslist', show_diseases, name ="diseaseslist"),
     path('data/', DiseasesListView.as_view()),

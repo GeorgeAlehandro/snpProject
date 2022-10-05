@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="views and urls beginning">
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/diseases.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" afterDir="false" />
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="added bootstrap navbar and database interactive on diseases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/inserting_trait.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/inserting_trait.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snppage.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snppage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +35,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/ubuntu/snpProject/snpProject",
-    "settings.editor.selected.configurable": "cn.aprilviolet.highlightbracketpair.AppSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ubuntu/snpProject/snpProject&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;cn.aprilviolet.highlightbracketpair.AppSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/snpProject" />
@@ -102,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664815516673</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added bootstrap navbar and database interactive on diseases">
+      <created>1664823047126</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664823047126</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +138,7 @@
     <MESSAGE value="setup commit" />
     <MESSAGE value="tsv script test" />
     <MESSAGE value="views and urls beginning" />
-    <option name="LAST_COMMIT_MESSAGE" value="views and urls beginning" />
+    <MESSAGE value="added bootstrap navbar and database interactive on diseases" />
+    <option name="LAST_COMMIT_MESSAGE" value="added bootstrap navbar and database interactive on diseases" />
   </component>
 </project>

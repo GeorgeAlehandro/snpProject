@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% block content %}
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+
 	</head>
 	<body>
 		<h1>Items</h1>
 		<hr>
-		<table id="items-table">
+		<table id="items-table" class="table table-striped table-bordered" style="width:70%">
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -30,4 +33,5 @@
 			});
 		</script>
 	</body>
-</html>
+{% endblock %}
+
