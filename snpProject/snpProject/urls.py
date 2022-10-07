@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from snpProjectDB.views import homepage, snppage, DiseasesListView, show_diseases
+from snpProjectDB.views import homepage, snppage, DiseasesListView, show_diseases, show_snps, SNPsListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage, name = "home"),
     path('snpsearch', snppage, name = "snpsearch"),
     path('diseaseslist', show_diseases, name ="diseaseslist"),
-    path('data/', DiseasesListView.as_view()),
+    path('diseasedata/', DiseasesListView.as_view()),
+    path('snplist', show_snps, name ="snplist"),
+    path('snpdata/', SNPsListView.as_view()),
 ]

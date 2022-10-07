@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect
 #from .forms import FormPerson
-from .models import DiseaseTrait
+from .models import DiseaseTrait, SNPToDiseaseToReference
 from django_serverside_datatable.views import ServerSideDatatableView
 from django.http import JsonResponse
 def homepage(request):
@@ -23,3 +23,10 @@ class DiseasesListView(ServerSideDatatableView):
 
 def show_diseases(request):
     return render(request, "serverside_diseases_fetch.html")
+
+class SNPsListView(ServerSideDatatableView):
+    queryset = SNPToDiseaseToReference.objects.all()
+    columns = ['rsid', 'diseaseID', 'pubmedid', 'pvalue', 'pvalueMLog', 'ReportedGenes']
+
+def show_snps(request):
+    return render(request, "serverside_snps_fetch.html")

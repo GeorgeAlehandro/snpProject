@@ -15,7 +15,7 @@ for column in columns_DiseaseTrait_table:
     indexes_DiseaseTrait_table.append(header_split.index(column))
 print(indexes_DiseaseTrait_table)
 indexes_Genes_table = []
-columns_Genes_table = ['MAPPED_GENE']
+columns_Genes_table = ['MAPPED_GENE', 'SNP_GENE_IDS']
 for column in columns_Genes_table:
     indexes_Genes_table.append(header_split.index(column))
 indexes_SNP_table = []
@@ -25,7 +25,7 @@ for column in columns_SNP_table:
 print(header_split)
 
 indexes_SNPToDiseaseToReference_table = []
-columns_SNPToDiseaseToReference_table = ['SNPS', 'DISEASE/TRAIT', 'PUBMEDID', 'P-VALUE', 'PVALUE_MLOG', 'REPORTED GENE(S)']
+columns_SNPToDiseaseToReference_table = ['SNPS', 'DISEASE/TRAIT', 'PUBMEDID', 'P-VALUE', 'PVALUE_MLOG', 'MAPPED_GENE', 'SNP_GENE_IDS']
 for column in columns_SNPToDiseaseToReference_table:
     indexes_SNPToDiseaseToReference_table.append(header_split.index(column))
 print(indexes_SNPToDiseaseToReference_table)
@@ -92,8 +92,9 @@ while next_line:
     Gene_to_add = [next_line_split[i] for i in indexes_Genes_table]
     print(i)
     splitting = re.split(', | - ', Gene_to_add[0])
-    for gene in splitting:
-        gene = Genes(name=gene)
+    splitting_id = re.split(', | - ', Gene_to_add[1])
+    for i in range(len(splitting)):
+        gene = Genes(name=splitting[i], ens_id = splitting_id[i])
         gene.save()
     ter.ReportedGenes.set(splitting)
 

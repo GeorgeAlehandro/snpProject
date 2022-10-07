@@ -1,12 +1,31 @@
 <html>
 {% extends 'base.html' %}
+{% load static %}
 <title>
     SNP Search
 </title>
+    {% block content %}
+<link href="{% static 'css/search.css' %}" rel="stylesheet">
+<div class="container">
 
-<body>
-This is where the content should be inserted.
-</body>
+                    <div class="row height d-flex justify-content-center align-items-center">
 
+                      <div class="col-md-8">
+
+                        <div class="search" position = "absolute>
+                          <i class="fa fa-search" position = "absolute"></i>
+                          <input type="text" class="form-control" placeholder="Type your SNP here...">
+                            <div>
+                                Examples:
+                            </div>
+                          <button class="btn btn-primary">Search</button>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+                </div>
+{% endblock %}
 
 </html>
