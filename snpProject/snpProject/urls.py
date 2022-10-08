@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from snpProjectDB.views import homepage, snppage, DiseasesListView, show_diseases, show_snps, SNPsListView
+from snpProjectDB.views import homepage, snppage, DiseasesListView, show_diseases, show_snps, SNPsListView, formsearch, formresult
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +25,6 @@ urlpatterns = [
     path('diseasedata/', DiseasesListView.as_view()),
     path('snplist', show_snps, name ="snplist"),
     path('snpdata/', SNPsListView.as_view()),
+    path('formsearch/', formsearch),
+    path('formresult/<str:rsid>/', formresult)
 ]
