@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 {% extends 'base.html' %}
 {% load static %}
 <title>
@@ -11,16 +11,32 @@
                     <div class="row height d-flex justify-content-center align-items-center">
 
                       <div class="col-md-8">
-
                         <div class="search" position = "absolute>
                           <i class="fa fa-search" position = "absolute"></i>
-                          <input type="text" class="form-control" placeholder="Type your SNP here...">
-                            <div>
-                                Examples:
-                            </div>
-                          <button class="btn btn-primary">Search</button>
-                        </div>
 
+                          <input id="input_snp" type="text" list = "snps" placeholder ="SNP to insert" class ="form-control" onkeyup="updateGiveLink()">
+
+                            <datalist id="snps">
+                                {% for snp in snps %}
+                                {{snp}}
+
+                                    <option value="{{ snp.rsid }}"> </option>
+                                {% endfor %}
+                            </datalist>
+                            </div>
+                        <script>
+                        function updateGiveLink() {
+                            document.getElementById("submit-button").href = "snpresult/"+document.getElementById("input_snp").value;
+                            }
+                        </script>
+                        <a id ="submit-button" class="btn btn-primary" href="#" type ="submit" >Search</a>
+
+
+
+
+                                Examples:
+                      <!--  </form>-->
+                        </div>
 
                       </div>
 

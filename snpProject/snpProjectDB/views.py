@@ -14,7 +14,21 @@ def homepage(request):
     return render(request, "homepage.html")
 
 def snppage(request):
-    return render(request, "snppage.html")
+    # if request.method == "POST":
+    #     form = FormSNP(request.POST)
+    #     if form.is_valid():
+    #         formsnp = form.save(commit=False)
+    #         return redirect('/formresult/{}/'.format(formsnp.rsid))
+    # else:
+    #     print("fle")
+    #     form = FormSNP()
+    # return render(request, 'snppage.html', {'form': form})
+
+    snps = SNP.objects.all()
+     #   if request.method == "POST":
+    #        return redirect('/formresult/{}/'.format(request.POST.get("rsid","0")))
+    print(snps)
+    return render(request, 'snppage.html', {'snps': snps})
 
 def all_diseases(request):
     diseases_list = DiseaseTrait.objects.all()
@@ -36,20 +50,19 @@ def show_snps(request):
     return render(request, "serverside_snps_fetch.html")
 
 def formsearch(request):
-    if request.method == "POST":
-        form = FormSNP(request.POST)
-        if form.is_valid():
-            formsnp = form.save(commit=False)
-            return redirect('/formresult/{}/'.format(formsnp.rsid))
-    else:
-        form = FormSNP()
-    return render(request, 'formsearch.html', {'form': form})
+    snps = SNP.objects.all()
+    return render(request, 'snppage.html', {'snps': snps})
 
-def formresult(request, rsid):
+def snpresult(request, rsid):
     html = """<html><h1>Search result</h1><body>
     This is the name that was searched: {}</body></html>""".format(rsid)
-    SNPsfound = SNPToDiseaseToReference.objects.filter(rsid__in=SNP.objects.filter(rsid__startswith=rsid)).values()
+   # SNPsfound = SNPToDiseaseToReference.objects.filter(rsid__in=SNP.objects.filter(rsid__startswith=rsid)).values
+    SNPsfound = SNP.objects.filter(rsid__startswith=rsid).values()
     for snp in SNPsfound:
         print(snp)
         html += "<br>" + str(snp) + "</br>"
     return HttpResponse(html)
+
+def index(request):
+    snps = SNP.objects.all()
+    return render(request, 'index.html', {'snps': snps})

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+<html>
+{% block content %}
+<input type="text" list = "snps" placeholder ="SNP to insert" class ="form-control">
+
+<datalist id="snps">
+    {% for snp in snps %}
+        <option value="{{ snp.rsid }}"> </option>
+    {% endfor %}
+</datalist>
+
+{% endblock %}
+</html>
