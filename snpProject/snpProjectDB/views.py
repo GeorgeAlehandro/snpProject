@@ -36,9 +36,12 @@ def all_diseases(request):
 
 class DiseasesListView(ServerSideDatatableView):
     queryset = DiseaseTrait.objects.all()
+    print(queryset)
+    print("TEST")
     columns = ['name']
 
 def show_diseases(request):
+    print("test")
     return render(request, "serverside_diseases_fetch.html")
 
 class SNPsListView(ServerSideDatatableView):
@@ -59,7 +62,6 @@ def snpresult(request, rsid):
    # SNPsfound = SNPToDiseaseToReference.objects.filter(rsid__in=SNP.objects.filter(rsid__startswith=rsid)).values
     SNPsfound = SNP.objects.filter(rsid__startswith=rsid).values()
     for snp in SNPsfound:
-        print(snp)
         html += "<br>" + str(snp) + "</br>"
     return HttpResponse(html)
 
