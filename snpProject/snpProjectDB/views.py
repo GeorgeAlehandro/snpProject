@@ -1,50 +1,45 @@
 from django.shortcuts import render
 from .snpforms import FormSNP
-
+from .tables import SNPtable
 #from helloworldapp.models import Person
 # Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import redirect
+from django.db.models import Q
 
 from .models import DiseaseTrait, SNPToDiseaseToReference, SNP
-from django_serverside_datatable.views import ServerSideDatatableView
+from django_datatables_view.base_datatable_view import BaseDatatableView
+from django.utils.html import escape
 from django.http import JsonResponse
 
 def homepage(request):
     return render(request, "homepage.html")
 
 def snppage(request):
-    # if request.method == "POST":
-    #     form = FormSNP(request.POST)
-    #     if form.is_valid():
-    #         formsnp = form.save(commit=False)
-    #         return redirect('/formresult/{}/'.format(formsnp.rsid))
-    # else:
-    #     print("fle")
-    #     form = FormSNP()
-    # return render(request, 'snppage.html', {'form': form})
-
     snps = SNP.objects.all()
-     #   if request.method == "POST":
-    #        return redirect('/formresult/{}/'.format(request.POST.get("rsid","0")))
-    print(snps)
-    return render(request, 'snppage.html', {'snps': snps})
+    chrs = SNP.objects.order_by().values('chrom').distinct()
+    return render(request, 'snppage.html', {'snps': snps, 'chrs': chrs})
 
 def all_diseases(request):
     diseases_list = DiseaseTrait.objects.all()
     return render(request, "diseases.html", {'diseases_list': diseases_list})
 
-class DiseasesListView(ServerSideDatatableView):
-    queryset = DiseaseTrait.objects.all()
-    print(queryset)
-    print("TEST")
+class DiseasesListView(BaseDatatableView):
+    model = DiseaseTrait
     columns = ['name']
+
+    def render_column(self, row, column):
+        if column == 'name':
+            ret = '<a href="%s">'%row.name +row.name+'</a>'
+            return ret
+        else:
+            return super(DiseasesListView, self).render_column(row, column)
 
 def show_diseases(request):
     print("test")
     return render(request, "serverside_diseases_fetch.html")
 
-class SNPsListView(ServerSideDatatableView):
+class SNPsListView(BaseDatatableView):
     queryset = SNPToDiseaseToReference.objects.all()
     columns = ['rsid', "strongest_snp", 'diseaseID', 'pubmedid', 'pvalue', 'pvalueMLog', 'ReportedGenes', "ci"]
 
@@ -57,14 +52,5 @@ def formsearch(request):
     return render(request, 'snppage.html', {'snps': snps})
 
 def snpresult(request, rsid):
-    html = """<html><h1>Search result</h1><body>
-    This is the name that was searched: {}</body></html>""".format(rsid)
-   # SNPsfound = SNPToDiseaseToReference.objects.filter(rsid__in=SNP.objects.filter(rsid__startswith=rsid)).values
-    SNPsfound = SNP.objects.filter(rsid__startswith=rsid).values()
-    for snp in SNPsfound:
-        html += "<br>" + str(snp) + "</br>"
-    return HttpResponse(html)
-
-def index(request):
-    snps = SNP.objects.all()
-    return render(request, 'index.html', {'snps': snps})
+    SNPsfound= SNPtable(SNP.objects.filter(Q(rsid__startswith=rsid)| Q(chrom__startswith=rsid)).values())
+    return render(request, "experimental_snp.html", {'SNPsfound': SNPsfound})

@@ -6,6 +6,7 @@
 </title>
     {% block content %}
 <link href="{% static 'css/search.css' %}" rel="stylesheet">
+
 <div class="container">
 
                     <div class="row height d-flex justify-content-center align-items-center">
@@ -13,13 +14,9 @@
                       <div class="col-md-8">
                         <div class="search" position = "absolute>
                           <i class="fa fa-search" position = "absolute"></i>
-
-                          <input id="input_snp" type="text" list = "snps" placeholder ="SNP to insert" class ="form-control" onkeyup="updateGiveLink()">
-
+                          <input id="input_snp" type="text" list = "snps" placeholder ="SNP to insert" class ="form-control" onchange="updateGiveLink()">
                             <datalist id="snps">
                                 {% for snp in snps %}
-                                {{snp}}
-
                                     <option value="{{ snp.rsid }}"> </option>
                                 {% endfor %}
                             </datalist>
@@ -29,7 +26,28 @@
                             document.getElementById("submit-button").href = "snpresult/"+document.getElementById("input_snp").value;
                             }
                         </script>
+
+
                         <a id ="submit-button" class="btn btn-primary" href="#" type ="submit" >Search</a>
+                        <div>
+                                Examples:
+                        </div>
+                        <div>
+                         <input id="input_chr" type="select" list = "chrs" placeholder ="Chromosomes to insert" class ="form-control" onchange="updateGiveLinkd()">
+                            <datalist id="chrs">
+                                {% for chr in chrs %}
+                                    <option value="{{ chr.chrom }}"> </option>
+                                {% endfor %}
+                            </datalist>
+                            </div>
+                        <script>
+                        function updateGiveLinkd() {
+                            document.getElementById("submit-button-chr").href = "snpresult/"+document.getElementById("input_chr").value;
+                            }
+                        </script>
+
+
+                        <a id ="submit-button-chr" class="btn btn-primary" href="#" type ="submit" >Search</a>
 
 
 

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="forms jquery">
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="might change python package">
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/tables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/experimental_snp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snppage.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snppage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665428588193</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="might change python package">
+      <created>1666012595610</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666012595610</updated>
+    </task>
+    <task id="LOCAL-00014" summary="might change python package">
+      <created>1666012672363</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666012672363</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +195,7 @@
     <MESSAGE value="datatable responsive snp search" />
     <MESSAGE value="added form functionality" />
     <MESSAGE value="forms jquery" />
-    <option name="LAST_COMMIT_MESSAGE" value="forms jquery" />
+    <MESSAGE value="might change python package" />
+    <option name="LAST_COMMIT_MESSAGE" value="might change python package" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 <html>
 {% block content %}
+<h1>HerE?</h1>
 <input type="text" list = "snps" placeholder ="SNP to insert" class ="form-control">
 
 <datalist id="snps">
@@ -9,5 +10,12 @@
     {% endfor %}
 </datalist>
 
+<input type="text" list = "chr" placeholder ="Chromosome to search" class ="form-control">
+
+<datalist id="chr">
+    {% for chr in chrs %}
+        <option value="{{ chr.chrom }}"> </option>
+    {% endfor %}
+</datalist>
 {% endblock %}
 </html>

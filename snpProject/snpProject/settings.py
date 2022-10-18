@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'snpProjectDB',
     "crispy_forms",
     'register.apps.RegisterConfig',
+    'table',
 
 ]
 
