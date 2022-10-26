@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="might change python package">
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/tables.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/experimental_snp.html" afterDir="false" />
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="using a django_datatables_view to render filtered qs">
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snppage.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snppage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/experimental_snp.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/experimental_snp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snps_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snps_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snppage.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,17 +36,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ubuntu/helloworld/helloworldapp/views.py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;cn.aprilviolet.highlightbracketpair.AppSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/ubuntu/snpProject/snpProject/snpProjectDB/templates",
+    "settings.editor.selected.configurable": "cn.aprilviolet.highlightbracketpair.AppSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/snpProject/snpProjectDB/templates" />
       <recent name="$PROJECT_DIR$/snpProject" />
     </key>
   </component>
@@ -158,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666012672363</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="using a django_datatables_view to render filtered qs">
+      <created>1666075619447</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1666075619447</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +203,7 @@
     <MESSAGE value="added form functionality" />
     <MESSAGE value="forms jquery" />
     <MESSAGE value="might change python package" />
-    <option name="LAST_COMMIT_MESSAGE" value="might change python package" />
+    <MESSAGE value="using a django_datatables_view to render filtered qs" />
+    <option name="LAST_COMMIT_MESSAGE" value="using a django_datatables_view to render filtered qs" />
   </component>
 </project>

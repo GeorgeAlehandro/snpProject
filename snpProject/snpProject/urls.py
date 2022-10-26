@@ -14,8 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from snpProjectDB.views import homepage, snppage, DiseasesListView, show_diseases, show_snps, SNPsListView, formsearch, snpresult
+from django.urls import path, re_path
+from snpProjectDB.views import homepage, snppage, DiseasesListView, show_diseases, show_snps, SNPListView, formsearch, snpresult, show_snp_result,diseaseResult, SNPToDiseaseToReferenceListView, show_snptodiseasetoref_result
 from register import views as v
 from django.contrib.auth.views import LoginView, LogoutView
 urlpatterns = [
@@ -24,13 +24,15 @@ urlpatterns = [
     path('snpsearch', snppage, name = "snpsearch"),
     path('diseaseslist', show_diseases, name ="diseaseslist"),
     path('diseasedata/', DiseasesListView.as_view()),
-    path('snplist', show_snps, name ="snplist"),
-    path('snpdata/', SNPsListView.as_view()),
-   # path('formsearch/', formsearch),
+    #path('snplist', show_snps, name ="snplist"),
+    re_path(r'^fetchsnp/',SNPListView.as_view(), name='order_snp'),
+    re_path(r'^fetchsnptodiseasetoref/',SNPToDiseaseToReferenceListView.as_view(), name='order_snptodiseasetoref'),
     path('snpresult/<str:rsid>/', snpresult, name="snpresult"),
+    re_path(r'snpsearch/', show_snp_result),
     path("register/", v.register, name="register"),
     path("login/", v.login_request, name='login'),
     path("logout/", v.logout_request, name='logout'),
     path('profile/<username>', v.profile, name='profile'),
-
+    path('disease/<str:disease>/', diseaseResult, name="diseaseResult"),
+    re_path(r'disease/', show_snptodiseasetoref_result),
 ]
