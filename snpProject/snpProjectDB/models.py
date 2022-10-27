@@ -51,3 +51,4 @@ class SNPToDiseaseToReference(models.Model):
   #          )
  #       ]
 
+#SELECT "snptodiseasetoreference_id","genes_id" from snpProjectDB_snptodiseasetoreference_ReportedGenes, snpProjectDB_snptodiseasetoreference  where snpProjectDB_snptodiseasetoreference.id = snpProjectDB_snptodiseasetoreference_ReportedGenes.snptodiseasetoreference_id;

@@ -45,13 +45,27 @@ def show_diseases(request):
 
 class SNPToDiseaseToReferenceListView(BaseDatatableView):
     model = SNPToDiseaseToReference
+
     columns = ['rsid', "strongest_snp", 'diseaseID', 'pubmedid', 'pvalue', 'pvalueMLog', 'ReportedGenes', "ci"]
     def filter_queryset(self, qs):
-            disease_filter = self.request.GET.get('diseaseID', None)
-            if disease_filter:
-                qs = qs.filter(diseaseID__name__iexact=disease_filter)
-            return qs
-
+        disease_filter = self.request.GET.get('diseaseID', None)
+        if disease_filter:
+            qs = qs.filter(diseaseID__name__iexact=disease_filter)
+        for query in qs:
+            print(query.ReportedGenes.all())
+            for manga in query.ReportedGenes.all():
+                print(manga.name)
+        return qs
+    def render_column(self, row, column):
+        info = ""
+        if column == 'ReportedGenes':
+            for gene in row.ReportedGenes.all():
+                info += gene.name +", "
+            info = info[:-2]
+            ret = '<a>' +info+'</a>'
+            return ret
+        else:
+            return super(SNPToDiseaseToReferenceListView, self).render_column(row, column)
 def show_snps(request):
     return render(request, "serverside_snps_fetch.html")
 
@@ -75,16 +89,10 @@ class SNPListView(BaseDatatableView):
         if chr_filter:
             qs = qs.filter(chrom__istartswith=chr_filter)
         return qs
+
 #"<? echo(urlencode("Replace the spaces here")); ?>"
 def show_snp_result(request):
     return render(request, "serverside_snps_fetch.html")
-
-def diseaseResult(request, disease):
-    #disease = disease.replace("+", " ")
-    #Diseasesfound = SNPToDiseaseToReference.objects.filter(diseaseID__name__iexact=disease)
-   # return render(request, "diseases.html", {'diseases_list': Diseasesfound})
-    SNPsfound = SNPToDiseaseToReferencetable(SNPToDiseaseToReference.objects.filter(diseaseID__name__iexact=disease))
-    return render(request, "experimental_snp.html", {'SNPsfound': SNPsfound})
 
 def show_snptodiseasetoref_result(request):
     return render(request, "serverside_snpstoreferencetodisease_fetch.html")

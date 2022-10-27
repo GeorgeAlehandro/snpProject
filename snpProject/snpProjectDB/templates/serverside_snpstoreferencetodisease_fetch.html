@@ -9,6 +9,8 @@
 	</head>
 	<body>
 		<h1>SNPs</h1>
+		TEST
+		<input id="teste" />
 		<hr>
 		<table id="snp-reference-disease-table" class="table table-striped table-bordered">
 			<thead>
@@ -35,13 +37,24 @@
 		var url = new URL(window.location.href);
 		console.log({% url 'order_snptodiseasetoref' %});
 		var link = String({% url 'order_snptodiseasetoref' %});
+		var oTable;
 			$(document).ready(function () {
-				var oTable = $('#snp-reference-disease-table').dataTable({
+				var oTable = $('#snp-reference-disease-table').DataTable({
+						  "initComplete": function(settings, json) {
+						   var info = oTable.page.info();
+  var count = info.recordsDisplay;
+			  $('#teste').val(count);
+  			$('#teste').change();
+		  },
 				"processing": true,
 					"serverSide": true,
 					"ajax": link.concat("?",location.search.substring(1))
 				});
 			});
+
+		</script>
+
+	<script language="javascript">
 		</script>
 	</body>
 {% endblock %}
