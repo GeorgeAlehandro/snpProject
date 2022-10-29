@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.db.models import Q
 import urllib.parse
-from .models import DiseaseTrait, SNPToDiseaseToReference, SNP
+from .models import DiseaseTrait, SNPToDiseaseToReference, SNP, Genes
 from django_datatables_view.base_datatable_view import BaseDatatableView
 from django.utils.html import escape
 from django.http import JsonResponse
@@ -51,21 +51,26 @@ class SNPToDiseaseToReferenceListView(BaseDatatableView):
         disease_filter = self.request.GET.get('diseaseID', None)
         if disease_filter:
             qs = qs.filter(diseaseID__name__iexact=disease_filter)
-        for query in qs:
-            print(query.ReportedGenes.all())
-            for manga in query.ReportedGenes.all():
-                print(manga.name)
+        genes_filter = self.request.GET.get('ReportedGenes', None)
+        if genes_filter:
+            qs = qs.filter(ReportedGenes__name__iexact=genes_filter)
         return qs
     def render_column(self, row, column):
         info = ""
-        if column == 'ReportedGenes':
+        if column == 'pubmedid':
+            link = "https://pubmed.ncbi.nlm.nih.gov/" + str(row.pubmedid)
+            pubmed_link = '<a href="%s">'%link +str(row.pubmedid)+'</a>'
+            return pubmed_link
+        elif (column == 'ReportedGenes'):
             for gene in row.ReportedGenes.all():
-                info += gene.name +", "
-            info = info[:-2]
-            ret = '<a>' +info+'</a>'
-            return ret
-        else:
-            return super(SNPToDiseaseToReferenceListView, self).render_column(row, column)
+                gene_query = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=" + str(gene.name)
+                info += '<a href="%s">'%gene_query +gene.name +", " '</a>'
+            info = info[:-6]
+            return info
+        return super(SNPToDiseaseToReferenceListView, self).render_column(row, column)
+
+
+
 def show_snps(request):
     return render(request, "serverside_snps_fetch.html")
 
@@ -94,5 +99,9 @@ class SNPListView(BaseDatatableView):
 def show_snp_result(request):
     return render(request, "serverside_snps_fetch.html")
 
+def genespage(request):
+    genes = Genes.objects.all()
+    print(genes)
+    return render(request, 'genes_search_page.html', {'genes': genes})
 def show_snptodiseasetoref_result(request):
     return render(request, "serverside_snpstoreferencetodisease_fetch.html")
