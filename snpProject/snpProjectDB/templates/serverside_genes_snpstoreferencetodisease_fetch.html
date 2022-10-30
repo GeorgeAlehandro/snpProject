@@ -14,12 +14,12 @@
     -->
 </head>
 <body>
-<h1>SNPs</h1>
+<h1>Genes</h1>
 <div class="dynamic">
 			<span class="rightfloat">
-				Trait searched:
+				Gene searched:
 				<b>
-				<span id="name-disease">
+				<span id="name-gene">
 
 
 				</span></b>
@@ -84,24 +84,12 @@
 <script language="javascript">
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
-		const product = urlParams.get('diseaseID')
+		const name = urlParams.get('ReportedGenes')
 		$(document).ready(function () {
-				$('#name-disease').html(product);
+				$('#name-gene').html(name);
 			});
 		</script>
- <button onclick="retrieveStats()">Click me</button>
-<script language="javascript">
-function retrieveStats() {
-		let jsonUrl = '{% static 'plot/plot.json' %}';
-				console.log(jsonUrl);
-				function getData(url, cb) {
-				  fetch(url)
-					.then(response => response.json())
-					.then(result => cb(result));
-				}
-		getData(jsonUrl, (graph) => Plotly.newPlot('tester', graph.data, graph.layout, graph.type));
-		}
-</script>
+
 	<div id="tester" style="width:1000px;height:600px;"></div>
 </body>
 {% endblock %}

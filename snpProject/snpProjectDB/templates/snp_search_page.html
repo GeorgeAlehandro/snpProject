@@ -14,7 +14,7 @@
                       <div class="col-md-8">
                         <div class="search" position = "absolute>
                           <i class="fa fa-search" position = "absolute"></i>
-                          <input id="input_snp" name="snp_id" type="text" list = "snps" placeholder ="SNP to insert" class ="form-control">
+                          <input id="input_snp" name="snp_id" type="text" list = "snps" placeholder ="SNP to search..." class ="form-control">
                             <datalist id="snps">
                                 {% for snp in snps %}
                                     <option value="{{ snp.rsid }}"> </option>
@@ -22,17 +22,19 @@
                             </datalist>
                             </div>
                         <div>
-                                Examples:
+                            Examples: <a href = "/snpsearch/?snp_id=rs7584330&chr="> rs7584330 </a>,
+                            <a href = "/snpsearch/?snp_id=rs10936632&chr="> rs10936632 </a>...
                         </div>
                         <div>
-                         <input id="input_chr" type="select" list = "chrs" placeholder ="Chromosomes to insert" class ="form-control" name = "chr">
+                         <input id="input_chr" type="select" list = "chrs" placeholder ="Chromosome to search..." class ="form-control" name = "chr">
                             <datalist id="chrs">
                                 {% for chr in chrs %}
                                     <option value="{{ chr.chrom }}"> </option>
                                 {% endfor %}
                             </datalist>
                             </div>
-                                Examples:
+                               Examples: <a href = "/snpsearch/?snp_id=&chr=1"> 1 </a>,
+                            <a href = "/snpsearch/?snp_id=&chr=12"> 12 </a>...
                         </div>
                               <input type = "submit" value="Submit">
 

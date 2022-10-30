@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 {% extends 'base.html' %}
 {% load static %}
 <title>
@@ -6,7 +6,7 @@
 </title>
     {% block content %}
 <link href="{% static 'css/search.css' %}" rel="stylesheet">
-  <form name="cust_info" action ="/disease/" method="get" class="form-horizontal" role="form">
+  <form name="cust_info" action ="/genes/" method="get" class="form-horizontal" role="form">
 <div class="container">
 
                     <div class="row height d-flex justify-content-center align-items-center">
@@ -14,7 +14,7 @@
                       <div class="col-md-8">
                         <div class="search" position = "absolute>
                           <i class="fa fa-search" position = "absolute"></i>
-                          <input id="input_snp" name="ReportedGenes" type="text" list = "genes" placeholder ="Gene to be searched..." class ="form-control">
+                          <input id="input_snp" name="ReportedGenes" type="text" list = "genes" placeholder ="Gene to search..." class ="form-control">
                             <datalist id="genes">
                                 {% for gene in genes %}
                                     <option value="{{ gene.name }}"> </option>
@@ -22,7 +22,8 @@
                             </datalist>
                             </div>
                         <div>
-                                Examples:
+                                Examples: <a href = "/genes/?ReportedGenes=TSLP"> TSLP </a>,
+                            <a href = "/genes/?ReportedGenes=BRCA2"> BRCA2 </a>...
                         </div>
                               <input type = "submit" value="Submit">
 

@@ -1,3 +1,4 @@
+import natsort
 from django.shortcuts import render
 from .snpforms import FormSNP
 from .tables import SNPtable, SNPToDiseaseToReferencetable
@@ -12,6 +13,9 @@ from django_datatables_view.base_datatable_view import BaseDatatableView
 from django.utils.html import escape
 from django.http import JsonResponse
 from django.utils.encoding import iri_to_uri
+import natsort
+import plotly.graph_objs as go
+import pandas as pd
 def homepage(request):
     return render(request, "homepage.html")
 
@@ -49,11 +53,35 @@ class SNPToDiseaseToReferenceListView(BaseDatatableView):
     columns = ['rsid', "strongest_snp", 'diseaseID', 'pubmedid', 'pvalue', 'pvalueMLog', 'ReportedGenes', "ci"]
     def filter_queryset(self, qs):
         disease_filter = self.request.GET.get('diseaseID', None)
+        list_region = []
+        list_pvalueMLog = []
         if disease_filter:
             qs = qs.filter(diseaseID__name__iexact=disease_filter)
         genes_filter = self.request.GET.get('ReportedGenes', None)
         if genes_filter:
             qs = qs.filter(ReportedGenes__name__iexact=genes_filter)
+        for query in qs:
+            list_region.append(query.rsid.chrom)
+            list_pvalueMLog.append(query.pvalueMLog)
+        # Creating the Figure instance
+        print("@@@@@@@")
+        df = pd.DataFrame({'chr_region': list_region,
+                           'pvalueMLog': list_pvalueMLog})
+        df.pvalueMLog = df.pvalueMLog.astype(float)
+        df = df.sort_values("chr_region", key = natsort.natsort_keygen())
+        print(df)
+        data = [go.Scatter(
+            x=df['chr_region'],
+            y=df['pvalueMLog'],
+            mode='markers',
+
+
+        )]
+        fig = go.Figure(data=data)
+        fig.update_layout(title="Distribution of the SNPs related to this trait.", title_x=0.5)
+        fig.update_yaxes(title="-Log (PVal)")
+        fig.update_xaxes(title="Location of the SNPs", tickmode='linear')
+        fig.write_json("/home/ubuntu/snpProject/snpProject/snpProjectDB/static/plot/plot.json")
         return qs
     def render_column(self, row, column):
         info = ""
@@ -85,14 +113,14 @@ def snpresult(request, rsid):
 
 class SNPListView(BaseDatatableView):
     model = SNP
-    columns = ['rsid', 'snip_id_current', 'chrom','chrom_pos', 'chrom_region']
+    columns = ['rsid', 'snp_id_current', 'chrom','chrom_pos', 'chrom_region']
     def filter_queryset(self, qs):
         snp_filter = self.request.GET.get('snp_id', None)
         chr_filter = self.request.GET.get('chr', None)
         if snp_filter:
             qs = qs.filter(rsid__istartswith=snp_filter)
         if chr_filter:
-            qs = qs.filter(chrom__istartswith=chr_filter)
+            qs = qs.filter(chrom=chr_filter)
         return qs
 
 #"<? echo(urlencode("Replace the spaces here")); ?>"
@@ -101,7 +129,9 @@ def show_snp_result(request):
 
 def genespage(request):
     genes = Genes.objects.all()
-    print(genes)
     return render(request, 'genes_search_page.html', {'genes': genes})
 def show_snptodiseasetoref_result(request):
     return render(request, "serverside_snpstoreferencetodisease_fetch.html")
+
+def show_genes_snptodiseasetoref_result(request):
+    return render(request, "serverside_genes_snpstoreferencetodisease_fetch.html")
