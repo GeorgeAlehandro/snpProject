@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% block content %}
-	<head>
+<head xmlns="">
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
@@ -24,9 +24,32 @@
 		<script language="javascript">
 			$(document).ready(function () {
 				var oTable = $('#items-table').dataTable({
+				        initComplete: function () {
+            this.api()
+                .columns()
+                .every(function () {
+                    var column = this;
+                    var select = $('<select><option value=""></option></select>')
+                        .appendTo($(column.footer()).empty())
+                        .on('change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+                            column.search(val ? '^' + val + '$' : '', true, false).draw();
+                        });
+
+                    column
+                        .data()
+                        .unique()
+                        .sort()
+                        .each(function (d, j) {
+                            select.append('<option value="' + d + '">' + d + '</option>');
+                        });
+                });
+        },
 				"processing": true,
 					"serverSide": true,
 					"ajax": "/diseasedata/"
+
 				});
 			});
 		</script>

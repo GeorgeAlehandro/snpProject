@@ -1,0 +1,46 @@
+<html>
+{% extends 'base_fixed_footer.html' %}
+{% load static %}
+<title>
+    SNP Search
+</title>
+    {% block content %}
+<h1 class="text-center">Documentation</h1>
+<div class="container">
+    <div class="row">
+            <div class="col-sm-4">
+                <div class ="card">
+                  <div class="card-body">
+                     <a href="/gwas/docs/faq">
+               <h2 class="card-title">FAQs</h2></a>
+                <p class="card-text">Check here for answers to common questions about this GWAS</p>
+            </div>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class ="card">
+                <div class="card-body">
+                <a href="/gwas/docs/faq">
+                    <h2 class="card-title">Methods</h2></a>
+                <p>A full description of the Catalog eligibility criteria and curation methods.</p>
+            </div>
+            </div>
+            </div>
+            <div class="col-sm-4">
+                                                            <div class ="card">
+
+                        <div class="card-body">
+                <a href="/gwas/docs/tutorial">
+                <h2>User</h2></a>
+                <p>Become a user for additional functionalities.</p>
+            </div>
+            </div>
+                                                                                          </div>
+    </div>
+
+
+</div>
+
+{% endblock %}
+
+</html>

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
 
        .height{
-        height: 100vh;
+        height: 70vh;
        }
 
 
@@ -45,5 +45,10 @@
         height: 50px;
         width: 110px;
         background: blue;
+
+       }
+
+       .info-text {
+       color: green;
 
        }

@@ -24,10 +24,6 @@ def snppage(request):
     chrs = SNP.objects.order_by().values('chrom').distinct()
     return render(request, 'snp_search_page.html', {'snps': snps, 'chrs': chrs})
 
-def all_diseases(request):
-    diseases_list = DiseaseTrait.objects.all()
-    return render(request, "diseases.html", {'diseases_list': diseases_list})
-
 class DiseasesListView(BaseDatatableView):
     model = DiseaseTrait
     columns = ['name']
@@ -44,7 +40,6 @@ class DiseasesListView(BaseDatatableView):
             return super(DiseasesListView, self).render_column(row, column)
 
 def show_diseases(request):
-    print("test")
     return render(request, "serverside_diseases_fetch.html")
 
 class SNPToDiseaseToReferenceListView(BaseDatatableView):
@@ -55,6 +50,8 @@ class SNPToDiseaseToReferenceListView(BaseDatatableView):
         disease_filter = self.request.GET.get('diseaseID', None)
         list_region = []
         list_pvalueMLog = []
+        list_rsidname = []
+        list_detail_region = []
         if disease_filter:
             qs = qs.filter(diseaseID__name__iexact=disease_filter)
         genes_filter = self.request.GET.get('ReportedGenes', None)
@@ -62,22 +59,25 @@ class SNPToDiseaseToReferenceListView(BaseDatatableView):
             qs = qs.filter(ReportedGenes__name__iexact=genes_filter)
         for query in qs:
             list_region.append(query.rsid.chrom)
+            list_rsidname.append(query.rsid.rsid)
             list_pvalueMLog.append(query.pvalueMLog)
+            list_detail_region.append(query.rsid.chrom_region)
         # Creating the Figure instance
-        print("@@@@@@@")
         df = pd.DataFrame({'chr_region': list_region,
-                           'pvalueMLog': list_pvalueMLog})
+                           'pvalueMLog': list_pvalueMLog,
+                          'rsidname': list_rsidname,
+                           'detail_region': list_detail_region})
         df.pvalueMLog = df.pvalueMLog.astype(float)
         df = df.sort_values("chr_region", key = natsort.natsort_keygen())
-        print(df)
         data = [go.Scatter(
             x=df['chr_region'],
             y=df['pvalueMLog'],
             mode='markers',
-
-
+            hovertext="rsid: "+df["rsidname"] + "\n" +"Region:"+df['detail_region'],
+            hoverinfo="text",
         )]
         fig = go.Figure(data=data)
+
         fig.update_layout(title="Distribution of the SNPs related to this trait.", title_x=0.5)
         fig.update_yaxes(title="-Log (PVal)")
         fig.update_xaxes(title="Location of the SNPs", tickmode='linear')
@@ -107,7 +107,7 @@ def formsearch(request):
     return render(request, 'snp_search_page.html', {'snps': snps})
 
 def snpresult(request, rsid):
-    SNPsfound= SNPtable(SNP.objects.filter(Q(rsid__startswith=rsid)| Q(chrom__startswith=rsid)).values())
+    SNPsfound= SNPtable(SNP.objects.filter(Q(rsid__startswith=rsid) | Q(chrom__startswith=rsid)).values())
     return render(request, "experimental_snp.html", {'SNPsfound': SNPsfound})
 
 
@@ -130,8 +130,16 @@ def show_snp_result(request):
 def genespage(request):
     genes = Genes.objects.all()
     return render(request, 'genes_search_page.html', {'genes': genes})
+
+def diseasespage(request):
+    diseases = DiseaseTrait.objects.all()
+    print(diseases)
+    return render(request, 'diseases_search_page.html', {'diseases': diseases})
 def show_snptodiseasetoref_result(request):
     return render(request, "serverside_snpstoreferencetodisease_fetch.html")
 
 def show_genes_snptodiseasetoref_result(request):
     return render(request, "serverside_genes_snpstoreferencetodisease_fetch.html")
+
+def docs_mainpage(request):
+    return render(request, "docs.html")

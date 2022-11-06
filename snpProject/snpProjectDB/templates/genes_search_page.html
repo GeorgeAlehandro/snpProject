@@ -1,5 +1,5 @@
 <html>
-{% extends 'base.html' %}
+{% extends 'base_fixed_footer.html' %}
 {% load static %}
 <title>
     SNP Search
@@ -10,8 +10,10 @@
 <div class="container">
 
                     <div class="row height d-flex justify-content-center align-items-center">
-
+                                          <img class="img-fluid rounded" src="{% static 'gif/genes.gif' %}" alt="..." />
                       <div class="col-md-8">
+
+
                         <div class="search" position = "absolute>
                           <i class="fa fa-search" position = "absolute"></i>
                           <input id="input_snp" name="ReportedGenes" type="text" list = "genes" placeholder ="Gene to search..." class ="form-control">

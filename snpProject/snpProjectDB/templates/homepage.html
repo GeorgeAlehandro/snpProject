@@ -8,6 +8,19 @@ Seesd
 {% load static %}
 
 <body>
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <div class="col-lg-4 pl-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'gif/snp.gif' %}" alt="..." /></div>
+                <div class="col-lg-8 pl-md-5">
+                    <h1 class="font-weight-light">Welcome to SNP search page!</h1>
+                    <p>This website serves as an interactive in real-time search of Single nucleotide polymorphisms (SNPs)</p>
+                    <a class="btn btn-primary" href="{% url 'docs' %}">Check documentation!</a>
+                </div>
+            </div>
+            <!-- Call to Action-->
+            <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+            </div>
 <div class="row">
   <div class="col-sm-3">
     <div class="card h-100">
@@ -16,7 +29,6 @@ Seesd
     <h5 class="card-title">Genes</h5>
     <p class="card-text">Search for genes in the database.</p>
     <a href="{% url 'genesearch' %}" class="btn btn-primary">Go to Genes page</a>
-
   </div>
     </div>
   </div>
@@ -27,7 +39,7 @@ Seesd
   <div class="card-body">
     <h5 class="card-title">SNPs</h5>
     <p class="card-text">Search for SNPS in the database.</p>
-    <a href="{% url 'snpsearch' %}" class="btn btn-primary">Go somewhere</a>
+    <a href="{% url 'snpsearch' %}" class="btn btn-primary">Go to SNPS page</a>
   </div>
       </div>
     </div>
@@ -35,34 +47,31 @@ Seesd
 
 
 <!-- row 2 -->
-
-  <div class="col-sm-3">
-    <div class="card h-100">
-        <img class="card-img-top" src="{% static 'homeimages/diseases.png' %}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text</p>
-    <a href="{% url 'diseaseslist' %}" class="btn btn-primary">Go somewhere</a>
-
-  </div>
-    </div>
-  </div>
   <div class="col-sm-3">
     <div class="card h-100">
       <div class="card-body">
           <img class="card-img-top" src="{% static 'homeimages/search.png' %}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text.</p>
-    <a href="{% url 'snpsearch' %}" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Traits/Diseases</h5>
+    <p class="card-text">Search for a specific trait or disease of in our database.</p>
+    <a href="{% url 'diseasesearch' %}" class="btn btn-primary">Go to Traits page</a>
   </div>
       </div>
     </div>
   </div>
+  <div class="col-sm-3">
+    <div class="card h-100">
+        <img class="card-img-top" src="{% static 'homeimages/diseases.png' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">List of all the traits/diseases</h5>
+    <p class="card-text">Quick access the collection of the traits and diseases available in our database.</p>
+    <a href="{% url 'diseaseslist' %}" class="btn btn-primary">Go to Traits List page</a>
+
+  </div>
+    </div>
+  </div>
+
 </div>
-<h1>
-    SEEE
-</h1>
 
 
 </body>

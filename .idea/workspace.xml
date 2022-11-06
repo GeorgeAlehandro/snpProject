@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="Filter on ReportedGenes">
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_genes_snpstoreferencetodisease_fetch.html" afterDir="false" />
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="UI Improvements">
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base_fixed_footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/diseases_search_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/static/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/static/css/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/static/homeimages/genes.png" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/static/homeimages/genes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/static/homeimages/snp.png" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/static/homeimages/snp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/diseases.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/genes_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/genes_search_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_genes_snpstoreferencetodisease_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_genes_snpstoreferencetodisease_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snps_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snps_fetch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
@@ -188,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667025415306</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="UI Improvements">
+      <created>1667141103795</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667141103795</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +246,7 @@
     <MESSAGE value="serverside snpts_ref_dis" />
     <MESSAGE value="progress input display" />
     <MESSAGE value="Filter on ReportedGenes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter on ReportedGenes" />
+    <MESSAGE value="UI Improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Improvements" />
   </component>
 </project>
