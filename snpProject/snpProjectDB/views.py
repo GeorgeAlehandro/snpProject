@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.db.models import Q
 import urllib.parse
-from .models import DiseaseTrait, SNPToDiseaseToReference, SNP, Genes
+from .models import DiseaseTrait, SNPToDiseaseToReference, SNP, Genes, Reference
 from django_datatables_view.base_datatable_view import BaseDatatableView
 from django.utils.html import escape
 from django.http import JsonResponse
@@ -143,3 +143,23 @@ def show_genes_snptodiseasetoref_result(request):
 
 def docs_mainpage(request):
     return render(request, "docs.html")
+
+class ReferencesListView(BaseDatatableView):
+    model = Reference
+    columns = ['pubmedid', 'journal', 'date','title', 'URL']
+    def render_column(self, row, column):
+        if column == 'pubmedid':
+            link = "https://pubmed.ncbi.nlm.nih.gov/" + str(row.pubmedid)
+            pubmed_link = '<a href="%s">'%link +str(row.pubmedid)+'</a>'
+            return pubmed_link
+        elif (column == 'URL'):
+            link = "https://"+str(row.URL)
+            URL_link = '<a href="%s">'%link +str(row.URL)+'</a>'
+            return URL_link
+        return super(ReferencesListView, self).render_column(row, column)
+
+def show_references_result(request):
+    return render(request, "serverside_references_fetch.html")
+
+def test(request):
+    return render(request, "test.html")

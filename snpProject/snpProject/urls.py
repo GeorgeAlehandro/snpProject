@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from snpProjectDB.views import homepage, snppage, genespage, DiseasesListView, show_diseases, show_snps, SNPListView, formsearch, snpresult, show_snp_result, SNPToDiseaseToReferenceListView, show_snptodiseasetoref_result,show_genes_snptodiseasetoref_result, diseasespage, docs_mainpage
+from snpProjectDB.views import homepage, snppage, genespage, DiseasesListView, show_diseases, show_snps,test, SNPListView, formsearch, snpresult, show_snp_result, SNPToDiseaseToReferenceListView, show_snptodiseasetoref_result,show_genes_snptodiseasetoref_result, diseasespage, docs_mainpage, show_references_result,ReferencesListView
 from register import views as v
 from django.contrib.auth.views import LoginView, LogoutView
 urlpatterns = [
@@ -38,5 +38,7 @@ urlpatterns = [
     path('genesearch', genespage, name = "genesearch"),
     path('diseasesearch', diseasespage, name = "diseasesearch"),
     path("docs/", docs_mainpage, name='docs'),
-
+    path('referencesdata/', ReferencesListView.as_view(), name='order_references'),
+   path("references/", show_references_result, name='references'),
+path("test/", test, name='test'),
 ]

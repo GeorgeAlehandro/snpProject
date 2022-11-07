@@ -10,8 +10,74 @@ Seesd
 <body>
             <!-- Heading Row-->
             <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div class="col-lg-4 pl-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'gif/snp.gif' %}" alt="..." /></div>
-                <div class="col-lg-8 pl-md-5">
+                <div class="col-lg-6 pl-5">
+                    <!--Inside carousel-->
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" style=" width:100%; !important;">
+    <div class="carousel-item active">
+        <a href="{% url 'genesearch' %}">
+      <img src="{% static 'homeimages/carousel/genes.png' %}" class="d-block w-100" alt="...">
+            </a>
+              <div class="carousel-caption d-none d-md-block">
+        <h2 style='font-weight: bold;'>Genes</h2>
+        <p style="font-size:130%;background-color:#007bff;">Search for genes and their relations with the different traits!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+                <a href="{% url 'snpsearch' %}">
+
+      <img src="{% static 'homeimages/carousel/snp.png' %}" class="d-block w-100" alt="...">
+                </a>
+              <div class="carousel-caption d-none d-md-block">
+        <h2 style='font-weight: bold;' >SNP</h2>
+        <p style="font-size:130%;background-color:#007bff;">Check the SNPs page!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+                <a href="{% url 'diseasesearch' %}">
+
+      <img src="{% static 'homeimages/carousel/trait.png' %}" class="d-block w-100" alt="...">
+                </a>
+              <div class="carousel-caption d-none d-md-block">
+        <h3 style='font-weight: bold;'>Traits and diseases</h3>
+        <p style="font-size:130%;background-color:#007bff;">Check for a specific trait/disease and their related SNPs.</p>
+      </div>
+    </div>
+      <div class="carousel-item">
+                  <a href="{% url 'diseaseslist' %}">
+
+      <img src="{% static 'homeimages/carousel/trait2.png' %}" class="d-block w-100" alt="...">
+                  </a>
+              <div class="carousel-caption d-none d-md-block">
+        <h3 style='font-weight: bold;'>List of all the traits! </h3>
+        <p style="font-size:130%;background-color:#007bff;">Not sure of what you are looking for? Check all the traits in our database.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+                                    <!--End carousel-->
+
+                </div>
+                <div class="col-lg-6 pl-md-5">
                     <h1 class="font-weight-light">Welcome to SNP search page!</h1>
                     <p>This website serves as an interactive in real-time search of Single nucleotide polymorphisms (SNPs)</p>
                     <a class="btn btn-primary" href="{% url 'docs' %}">Check documentation!</a>
@@ -72,6 +138,7 @@ Seesd
   </div>
 
 </div>
+
 
 
 </body>
