@@ -52,6 +52,7 @@ class SNPToDiseaseToReferenceListView(BaseDatatableView):
         list_pvalueMLog = []
         list_rsidname = []
         list_detail_region = []
+        list_links = []
         if disease_filter:
             qs = qs.filter(diseaseID__name__iexact=disease_filter)
         genes_filter = self.request.GET.get('ReportedGenes', None)
@@ -60,28 +61,35 @@ class SNPToDiseaseToReferenceListView(BaseDatatableView):
         for query in qs:
             list_region.append(query.rsid.chrom)
             list_rsidname.append(query.rsid.rsid)
+            list_links.append("<a href=\"http://127.0.0.1:8000/snpsearch/?snp_id="+query.rsid.rsid+"&chr=\">+</a>")
+
             list_pvalueMLog.append(query.pvalueMLog)
             list_detail_region.append(query.rsid.chrom_region)
         # Creating the Figure instance
         df = pd.DataFrame({'chr_region': list_region,
                            'pvalueMLog': list_pvalueMLog,
                           'rsidname': list_rsidname,
-                           'detail_region': list_detail_region})
+                           'detail_region': list_detail_region,
+                           'test': list_links})
         df.pvalueMLog = df.pvalueMLog.astype(float)
         df = df.sort_values("chr_region", key = natsort.natsort_keygen())
+        plotAnnotes = []
+        print(list_links)
         data = [go.Scatter(
             x=df['chr_region'],
             y=df['pvalueMLog'],
-            mode='markers',
+            text = df['test'],
+            mode='markers+text',
             hovertext="rsid: "+df["rsidname"] + "\n" +"Region:"+df['detail_region'],
-            hoverinfo="text",
+            hoverinfo="text"
         )]
-        fig = go.Figure(data=data)
 
+        fig = go.Figure(data=data)
         fig.update_layout(title="Distribution of the SNPs related to this trait.", title_x=0.5)
         fig.update_yaxes(title="-Log (PVal)")
         fig.update_xaxes(title="Location of the SNPs", tickmode='linear')
         fig.write_json("/home/ubuntu/snpProject/snpProject/snpProjectDB/static/plot/plot.json")
+
         return qs
     def render_column(self, row, column):
         info = ""
@@ -102,6 +110,8 @@ class SNPToDiseaseToReferenceListView(BaseDatatableView):
 def show_snps(request):
     return render(request, "serverside_snps_fetch.html")
 
+def r():
+    print("rerere")
 def formsearch(request):
     snps = SNP.objects.all()
     return render(request, 'snp_search_page.html', {'snps': snps})

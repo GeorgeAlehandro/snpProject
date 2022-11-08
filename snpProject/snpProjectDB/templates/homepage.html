@@ -78,14 +78,14 @@ Seesd
 
                 </div>
                 <div class="col-lg-6 pl-md-5">
-                    <h1 class="font-weight-light">Welcome to SNP search page!</h1>
-                    <p>This website serves as an interactive in real-time search of Single nucleotide polymorphisms (SNPs)</p>
+                    <h2 style='font-weight: bold;'>Welcome to SNP search page!</h2>
+                    <p style="font-size:120%;">This website serves for interactive in real-time search of Single nucleotide polymorphisms (SNPs)</p>
                     <a class="btn btn-primary" href="{% url 'docs' %}">Check documentation!</a>
                 </div>
             </div>
             <!-- Call to Action-->
             <div class="card text-white bg-secondary my-5 py-4 text-center">
-                <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+                <div class="card-body"><p class="text-white m-0">Discover the different functionalities and discover more than 35000 records!</p></div>
             </div>
 <div class="row">
   <div class="col-sm-3">
@@ -93,7 +93,7 @@ Seesd
         <img class="card-img-top" src="{% static 'homeimages/genes.png' %}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Genes</h5>
-    <p class="card-text">Search for genes in the database.</p>
+    <p class="card-text">Search for a gene in the database and all the records containing it.</p>
     <a href="{% url 'genesearch' %}" class="btn btn-primary">Go to Genes page</a>
   </div>
     </div>
@@ -104,7 +104,7 @@ Seesd
           <img class="card-img-top" src="{% static 'homeimages/snp.png' %}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">SNPs</h5>
-    <p class="card-text">Search for SNPS in the database.</p>
+    <p class="card-text">Search for SNPS in the database and get information about them.</p>
     <a href="{% url 'snpsearch' %}" class="btn btn-primary">Go to SNPS page</a>
   </div>
       </div>

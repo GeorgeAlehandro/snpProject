@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="changes on hovertext, results templates">
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_references_fetch.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/test.html" afterDir="false" />
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="homepage modifications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/static/plot/plot.json" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/static/plot/plot.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_references_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_references_fetch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667734749715</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="homepage modifications">
+      <created>1667861209529</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1667861209529</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +248,7 @@
     <MESSAGE value="Filter on ReportedGenes" />
     <MESSAGE value="UI Improvements" />
     <MESSAGE value="changes on hovertext, results templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes on hovertext, results templates" />
+    <MESSAGE value="homepage modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="homepage modifications" />
   </component>
 </project>
