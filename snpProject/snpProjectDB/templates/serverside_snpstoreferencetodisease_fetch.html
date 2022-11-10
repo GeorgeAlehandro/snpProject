@@ -14,16 +14,20 @@
     -->
 </head>
 <body>
-<h1>Disease/Trait results</h1>
+<h1 class ="dynamic">
+	<span id ="page-title">
+	Disease/Trait results
+		</span>
+</h1>
 <h4 class="dynamic">
-			<span class="rightfloat">
-				Trait searched:
+			<span id = "name-purpose" class="rightfloat">	</span>
+
 				<b>
 				<span id="name-disease">
 
 
 				</span></b>
-	</span>
+
 	<span class="rightfloat">
 						mentioned <b><span id="number-disease"> </span></b> times
 	</span>
@@ -88,10 +92,24 @@
 <script language="javascript">
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
-		const product = urlParams.get('diseaseID')
+		const disease_name = urlParams.get('diseaseID');
+		if (disease_name !== null){
 		$(document).ready(function () {
-				$('#name-disease').html(product);
+		$('#name-purpose').html("Trait searched:");
+				$('#name-disease').html(disease_name);
+		$('#page-title').html("Disease/Trait results");
 			});
+			}
+
+		const rsid_name = urlParams.get('rsid');
+
+				if (rsid_name !== null){
+		$(document).ready(function () {
+		$('#name-purpose').html("RSID searched:");
+		$('#name-disease').html(rsid_name);
+		$('#page-title').html("SNP results");
+			});
+			}
 		</script>
  <button onclick="retrieveStats()">Click me</button>
 <script language="javascript">
@@ -106,6 +124,8 @@ function retrieveStats() {
 		getData(jsonUrl, (graph) => Plotly.newPlot('tester', graph.data, graph.layout, graph.type));
 		}
 </script>
+
+
 	<div id="tester" style="width:1000px;height:600px;"></div>
 </body>
 {% endblock %}

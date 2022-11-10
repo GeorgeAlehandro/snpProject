@@ -1,0 +1,65 @@
+<html>
+{% extends 'base_fixed_footer.html' %}
+{% load static %}
+<title>
+    SNP Search
+</title>
+
+    {% block content %}
+<link href="{% static 'css/faq.css' %}" rel="stylesheet">
+<h1 class="text-center"></h1>
+<body>
+    <main>
+        <h1 class="faq-heading">Frequently Asked Questions</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+                <!-- faq question -->
+                <h1 class="faq-page">What is the goal of this website?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>The goal of this page is to look up for SNPs and traits in an interactive way. The serverside calculations and filtering help in making the data fetch light and easy for the users.
+                        The power of datatables!</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <!-- faq question -->
+                <h1 class="faq-page">What is the source of the data?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>The data available is initially based on roughly 35000 associations that are then mapped into an internal database containing many tables. These associations are based on GWAS studies mentioned in the scientif articles.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <!-- faq question -->
+<h1 class="faq-page">Can I help in building the database? </h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Please do! Insert your data by <a href="/login"> logging in</a> and then heading to the bring your data page. Your submission will then be curated by a database maintainer.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script language="javascript">
+var faq = document.getElementsByClassName("faq-page");
+var i;
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+        /* Toggle between hiding and showing the active panel */
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+</script>
+{% endblock %}
+
+</html>
