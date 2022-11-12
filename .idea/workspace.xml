@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="plot clickable functions">
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/static/css/faq.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs_faq.html" afterDir="false" />
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="FAQ and modifs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/static/homeimages/carousel/trait2.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/static/plot/plot.json" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/static/plot/plot.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_references_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_references_fetch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
     </list>
@@ -219,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667866055284</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="FAQ and modifs">
+      <created>1668117055745</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1668117055745</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +265,7 @@
     <MESSAGE value="changes on hovertext, results templates" />
     <MESSAGE value="homepage modifications" />
     <MESSAGE value="plot clickable functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="plot clickable functions" />
+    <MESSAGE value="FAQ and modifs" />
+    <option name="LAST_COMMIT_MESSAGE" value="FAQ and modifs" />
   </component>
 </project>

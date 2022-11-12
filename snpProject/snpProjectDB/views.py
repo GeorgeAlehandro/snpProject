@@ -133,10 +133,18 @@ class SNPListView(BaseDatatableView):
     def filter_queryset(self, qs):
         snp_filter = self.request.GET.get('snp_id', None)
         chr_filter = self.request.GET.get('chr', None)
+        start_filter = self.request.GET.get('begin_pos', None)
+        end_filter = self.request.GET.get('end_pos', None)
         if snp_filter:
             qs = qs.filter(rsid__iexact=snp_filter)
         if chr_filter:
             qs = qs.filter(chrom=chr_filter)
+        if start_filter:
+            qs = qs.exclude(chrom_pos__exact='')
+            qs = qs.filter(chrom_pos__gte=start_filter)
+        if end_filter:
+            qs = qs.exclude(chrom_pos__exact='')
+            qs = qs.filter(chrom_pos__lte=end_filter)
         return qs
     def render_column(self, row, column):
         info = ""

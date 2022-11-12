@@ -12,7 +12,7 @@
                     <div class="row height d-flex justify-content-center align-items-center">
 
                       <div class="col-md-8">
-                        <div class="search" position = "absolute>
+                        <div class="search" position = "absolute">
                           <i class="fa fa-search" position = "absolute"></i>
                           <input id="input_snp" name="snp_id" type="text" list = "snps" placeholder ="SNP to search..." class ="form-control">
                             <datalist id="snps">
@@ -27,6 +27,7 @@
                         </div>
                         <div>
                          <input id="input_chr" type="select" list = "chrs" placeholder ="Chromosome to search..." class ="form-control" name = "chr">
+
                             <datalist id="chrs">
                                 {% for chr in chrs %}
                                     <option value="{{ chr.chrom }}"> </option>
@@ -35,7 +36,15 @@
                             </div>
                                Examples: <a href = "/snpsearch/?snp_id=&chr=1"> 1 </a>,
                             <a href = "/snpsearch/?snp_id=&chr=12"> 12 </a>...
-                        </div>
+                                        <div class="row align-items-center my-2">
+                <div class="col-lg-6 pl-5">
+                        <input id="begin_pos" type="text" placeholder ="Start position..." class ="form-control" name="begin_pos">
+                                    </div>
+                    <div class="col-lg-6 pl-5">
+                            <input id="end_pos" type="text" placeholder ="End position..." class ="form-control" name="end_pos">
+                </div>
+
+                                        </div>
                               <input type = "submit" value="Submit">
 
                       </div>
