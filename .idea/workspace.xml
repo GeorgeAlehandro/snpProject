@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="FAQ and modifs">
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="filtering based on chrom_pos">
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/submit_data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/static/plot/plot.json" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/static/plot/plot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/diseases_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/diseases_search_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/genes_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/genes_search_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/test.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,14 +45,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/ubuntu/snpProject/snpProject/snpProjectDB/static",
+    "last_opened_file_path": "/home/ubuntu/snpProject/snpProject/snpProjectDB/templates",
     "settings.editor.selected.configurable": "cn.aprilviolet.highlightbracketpair.AppSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/snpProject/snpProjectDB/static" />
       <recent name="$PROJECT_DIR$/snpProject/snpProjectDB/templates" />
+      <recent name="$PROJECT_DIR$/snpProject/snpProjectDB/static" />
       <recent name="$PROJECT_DIR$/snpProject" />
     </key>
   </component>
@@ -219,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668117055745</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="filtering based on chrom_pos">
+      <created>1668262632033</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1668262632033</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +280,7 @@
     <MESSAGE value="homepage modifications" />
     <MESSAGE value="plot clickable functions" />
     <MESSAGE value="FAQ and modifs" />
-    <option name="LAST_COMMIT_MESSAGE" value="FAQ and modifs" />
+    <MESSAGE value="filtering based on chrom_pos" />
+    <option name="LAST_COMMIT_MESSAGE" value="filtering based on chrom_pos" />
   </component>
 </project>

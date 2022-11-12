@@ -5,7 +5,7 @@ from .tables import SNPtable, SNPToDiseaseToReferencetable
 #from helloworldapp.models import Person
 # Create your views here.
 from django.http import HttpResponse
-from django.shortcuts import redirect
+from django.core.files.storage import FileSystemStorage
 from django.db.models import Q
 import urllib.parse
 from .models import DiseaseTrait, SNPToDiseaseToReference, SNP, Genes, Reference
@@ -194,5 +194,18 @@ class ReferencesListView(BaseDatatableView):
 def show_references_result(request):
     return render(request, "serverside_references_fetch.html")
 
-def test(request):
-    return render(request, "test.html")
+def simple_upload(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        if (myfile.name.endswith(".txt") or myfile.name.endswith(".tsv")):
+            filename = fs.save(myfile.name, myfile)
+            uploaded_file_url = fs.url(filename)
+            return render(request, 'submit_data.html', {
+                'uploaded_file_url': uploaded_file_url
+            })
+        fail = "failure"
+        return render(request, 'submit_data.html', {
+            'fail': fail
+        })
+    return render(request, 'submit_data.html')
