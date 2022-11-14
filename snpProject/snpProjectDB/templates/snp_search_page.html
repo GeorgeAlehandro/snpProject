@@ -4,54 +4,58 @@
 <title>
     SNP Search
 </title>
-    {% block content %}
+{% block content %}
 <link href="{% static 'css/search.css' %}" rel="stylesheet">
-  <form name="cust_info" action ="/snpsearch/" method="get" class="form-horizontal" role="form">
-<div class="container">
+<form name="cust_info" action="/snpsearch/" method="get" class="form-horizontal" role="form">
+    <div class="container">
 
-                    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="row height d-flex justify-content-center align-items-center">
 
-                      <div class="col-md-8">
-                        <div class="search" position = "absolute">
-                          <i class="fa fa-search" position = "absolute"></i>
-                          <input id="input_snp" name="snp_id" type="text" list = "snps" placeholder ="SNP to search..." class ="form-control">
-                            <datalist id="snps">
-                                {% for snp in snps %}
-                                    <option value="{{ snp.rsid }}"> </option>
-                                {% endfor %}
-                            </datalist>
-                            </div>
-                        <div>
-                            Examples: <a href = "/snpsearch/?snp_id=rs7584330&chr="> rs7584330 </a>,
-                            <a href = "/snpsearch/?snp_id=rs9989419&chr="> rs9989419 </a>...
-                        </div>
-                        <div>
-                         <input id="input_chr" type="select" list = "chrs" placeholder ="Chromosome to search..." class ="form-control" name = "chr">
+            <div class="col-md-8">
+                <div class="search" position="absolute">
+                    <i class="fa fa-search" position="absolute"></i>
+                    <input id="input_snp" name="snp_id" type="text" list="snps" placeholder="SNP to search..."
+                           class="form-control">
+                    <datalist id="snps">
+                        {% for snp in snps %}
+                        <option value="{{ snp.rsid }}"></option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+                <div>
+                    Examples: <a href="/snpsearch/?snp_id=rs7584330&chr="> rs7584330 </a>,
+                    <a href="/snpsearch/?snp_id=rs9989419&chr="> rs9989419 </a>...
+                </div>
+                <div>
+                    <input id="input_chr" type="select" list="chrs" placeholder="Chromosome to search..."
+                           class="form-control" name="chr">
 
-                            <datalist id="chrs">
-                                {% for chr in chrs %}
-                                    <option value="{{ chr.chrom }}"> </option>
-                                {% endfor %}
-                            </datalist>
-                            </div>
-                               Examples: <a href = "/snpsearch/?snp_id=&chr=1"> 1 </a>,
-                            <a href = "/snpsearch/?snp_id=&chr=12"> 12 </a>...
-                                        <div class="row align-items-center my-2">
-                <div class="col-lg-6 pl-5">
-                        <input id="begin_pos" type="text" placeholder ="Start position..." class ="form-control" name="begin_pos">
-                                    </div>
+                    <datalist id="chrs">
+                        {% for chr in chrs %}
+                        <option value="{{ chr.chrom }}"></option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+                Examples: <a href="/snpsearch/?snp_id=&chr=1"> 1 </a>,
+                <a href="/snpsearch/?snp_id=&chr=12"> 12 </a>...
+                <div class="row align-items-center my-2">
                     <div class="col-lg-6 pl-5">
-                            <input id="end_pos" type="text" placeholder ="End position..." class ="form-control" name="end_pos">
-                </div>
-
-                                        </div>
-                              <input type = "submit" value="Submit" class="btn btn-lg btn-primary">
-
-                      </div>
-
+                        <input id="begin_pos" type="text" placeholder="Start position..." class="form-control"
+                               name="begin_pos">
                     </div>
+                    <div class="col-lg-6 pl-5">
+                        <input id="end_pos" type="text" placeholder="End position..." class="form-control"
+                               name="end_pos">
+                    </div>
+
                 </div>
-  </form>
+                <input type="submit" value="Submit" class="btn btn-lg btn-primary">
+
+            </div>
+
+        </div>
+    </div>
+</form>
 {% endblock %}
 
 </html>

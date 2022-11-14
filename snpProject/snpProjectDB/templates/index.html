@@ -2,19 +2,19 @@
 <html>
 {% block content %}
 <h1>HerE?</h1>
-<input type="text" list = "snps" placeholder ="SNP to insert" class ="form-control">
+<input type="text" list="snps" placeholder="SNP to insert" class="form-control">
 
 <datalist id="snps">
     {% for snp in snps %}
-        <option value="{{ snp.rsid }}"> </option>
+    <option value="{{ snp.rsid }}"></option>
     {% endfor %}
 </datalist>
 
-<input type="text" list = "chr" placeholder ="Chromosome to search" class ="form-control">
+<input type="text" list="chr" placeholder="Chromosome to search" class="form-control">
 
 <datalist id="chr">
     {% for chr in chrs %}
-        <option value="{{ chr.chrom }}"> </option>
+    <option value="{{ chr.chrom }}"></option>
     {% endfor %}
 </datalist>
 {% endblock %}

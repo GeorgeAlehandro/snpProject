@@ -1,21 +1,14 @@
-import natsort
 from django.shortcuts import render
-from .snpforms import FormSNP
-from .tables import SNPtable, SNPToDiseaseToReferencetable
-#from helloworldapp.models import Person
-# Create your views here.
-from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
-from django.db.models import Q
 import urllib.parse
 from .models import DiseaseTrait, SNPToDiseaseToReference, SNP, Genes, Reference
 from django_datatables_view.base_datatable_view import BaseDatatableView
-from django.utils.html import escape
-from django.http import JsonResponse
-from django.utils.encoding import iri_to_uri
 import natsort
 import plotly.graph_objs as go
 import pandas as pd
+import crispy_forms
+import table
+
 def homepage(request):
     return render(request, "homepage.html")
 
@@ -120,6 +113,14 @@ class SNPToDiseaseToReferenceListView(BaseDatatableView):
                 info += '<a href="%s">'%gene_query +gene.name +", " '</a>'
             info = info[:-6]
             return info
+        elif column == 'rsid':
+            link = "/snpsearch/?snp_id=" + str(row.rsid)
+            rsid_link = '<a href="%s">'%link +str(row.rsid)+'</a>'
+            return rsid_link
+        elif column == 'diseaseID':
+            link = "/disease/?diseaseID=" + str(row.diseaseID)
+            rsid_link = '<a href="%s">'%link +str(row.diseaseID)+'</a>'
+            return rsid_link
         return super(SNPToDiseaseToReferenceListView, self).render_column(row, column)
 
 
@@ -177,6 +178,11 @@ def docs_mainpage(request):
 
 def docs_faqpage(request):
     return render(request, "docs_faq.html")
+def docs_methodspage(request):
+    return render(request, "docs_methods.html")
+def docs_userpage(request):
+    return render(request, "docs_user.html")
+
 class ReferencesListView(BaseDatatableView):
     model = Reference
     columns = ['pubmedid', 'journal', 'date','title', 'URL']

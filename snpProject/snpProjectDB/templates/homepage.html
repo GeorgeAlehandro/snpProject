@@ -2,143 +2,146 @@
 {% extends 'base.html' %}
 <title>
 
-Seesd
+    Seesd
 </title>
-    {% block content %}
+{% block content %}
 {% load static %}
 
 <body>
-            <!-- Heading Row-->
-            <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div class="col-lg-6 pl-5">
-                    <!--Inside carousel-->
+<!-- Heading Row-->
+<div class="row gx-4 gx-lg-5 align-items-center my-5">
+    <div class="col-lg-6 pl-5">
+        <!--Inside carousel-->
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-  </ol>
-  <div class="carousel-inner" style=" width:100%; !important;">
-    <div class="carousel-item active">
-        <a href="{% url 'genesearch' %}">
-      <img src="{% static 'homeimages/carousel/genes.png' %}" class="d-block w-100" alt="...">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" style=" width:100%; !important;">
+                <div class="carousel-item active">
+                    <a href="{% url 'genesearch' %}">
+                        <img src="{% static 'homeimages/carousel/genes.png' %}" class="d-block w-100" alt="...">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 style='font-weight: bold;'>Genes</h2>
+                        <p style="font-size:130%;background-color:#007bff;">Search for genes and their relations with
+                            the different traits!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{% url 'snpsearch' %}">
+
+                        <img src="{% static 'homeimages/carousel/snp.png' %}" class="d-block w-100" alt="...">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 style='font-weight: bold;'>SNP</h2>
+                        <p style="font-size:130%;background-color:#007bff;">Check the SNPs website!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{% url 'diseasesearch' %}">
+
+                        <img src="{% static 'homeimages/carousel/trait.png' %}" class="d-block w-100" alt="...">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style='font-weight: bold;'>Traits and diseases</h3>
+                        <p style="font-size:130%;background-color:#007bff;">Check for a specific trait/disease and their
+                            related SNPs.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{% url 'diseaseslist' %}">
+
+                        <img src="{% static 'homeimages/carousel/trait2.png' %}" class="d-block w-100" alt="...">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style='font-weight: bold;'>List of all the traits! </h3>
+                        <p style="font-size:130%;background-color:#007bff;">Not sure of what you are looking for? Check
+                            all the traits in our database.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
             </a>
-              <div class="carousel-caption d-none d-md-block">
-        <h2 style='font-weight: bold;'>Genes</h2>
-        <p style="font-size:130%;background-color:#007bff;">Search for genes and their relations with the different traits!</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-                <a href="{% url 'snpsearch' %}">
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
 
-      <img src="{% static 'homeimages/carousel/snp.png' %}" class="d-block w-100" alt="...">
-                </a>
-              <div class="carousel-caption d-none d-md-block">
-        <h2 style='font-weight: bold;' >SNP</h2>
-        <p style="font-size:130%;background-color:#007bff;">Check the SNPs page!</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-                <a href="{% url 'diseasesearch' %}">
 
-      <img src="{% static 'homeimages/carousel/trait.png' %}" class="d-block w-100" alt="...">
-                </a>
-              <div class="carousel-caption d-none d-md-block">
-        <h3 style='font-weight: bold;'>Traits and diseases</h3>
-        <p style="font-size:130%;background-color:#007bff;">Check for a specific trait/disease and their related SNPs.</p>
-      </div>
-    </div>
-      <div class="carousel-item">
-                  <a href="{% url 'diseaseslist' %}">
+        <!--End carousel-->
 
-      <img src="{% static 'homeimages/carousel/trait2.png' %}" class="d-block w-100" alt="...">
-                  </a>
-              <div class="carousel-caption d-none d-md-block">
-        <h3 style='font-weight: bold;'>List of all the traits! </h3>
-        <p style="font-size:130%;background-color:#007bff;">Not sure of what you are looking for? Check all the traits in our database.</p>
-      </div>
     </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <div class="col-lg-6 pl-md-5">
+        <h2 style='font-weight: bold;'>Welcome to SNP search website!</h2>
+        <p style="font-size:120%;">This website serves for interactive in real-time search of Single nucleotide
+            polymorphisms (SNPs)</p>
+        <a class="btn btn-primary" href="{% url 'docs' %}">Check documentation!</a>
+    </div>
 </div>
-
-
-
-
-                                    <!--End carousel-->
-
-                </div>
-                <div class="col-lg-6 pl-md-5">
-                    <h2 style='font-weight: bold;'>Welcome to SNP search page!</h2>
-                    <p style="font-size:120%;">This website serves for interactive in real-time search of Single nucleotide polymorphisms (SNPs)</p>
-                    <a class="btn btn-primary" href="{% url 'docs' %}">Check documentation!</a>
-                </div>
-            </div>
-            <!-- Call to Action-->
-            <div class="card text-white bg-secondary my-5 py-4 text-center">
-                <div class="card-body"><p class="text-white m-0">Discover the different functionalities and discover more than 35000 records!</p></div>
-            </div>
+<!-- Call to Action-->
+<div class="card text-white bg-secondary my-5 py-4 text-center">
+    <div class="card-body"><p class="text-white m-0">Discover the different functionalities and discover more than 35000
+        records!</p></div>
+</div>
 <div class="row">
-  <div class="col-sm-3">
-    <div class="card h-100">
-        <img class="card-img-top" src="{% static 'homeimages/genes.png' %}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Genes</h5>
-    <p class="card-text">Search for a gene in the database and all the records containing it.</p>
-    <a href="{% url 'genesearch' %}" class="btn btn-primary">Go to Genes page</a>
-  </div>
+    <div class="col-sm-3">
+        <div class="card h-100">
+            <img class="card-img-top" src="{% static 'homeimages/genes.png' %}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Genes</h5>
+                <p class="card-text">Search for a gene in the database and all the records containing it.</p>
+                <a href="{% url 'genesearch' %}" class="btn btn-primary">Go to Genes page</a>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card h-100">
-      <div class="card-body">
-          <img class="card-img-top" src="{% static 'homeimages/snp.png' %}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">SNPs</h5>
-    <p class="card-text">Search for SNPS in the database and get information about them.</p>
-    <a href="{% url 'snpsearch' %}" class="btn btn-primary">Go to SNPS page</a>
-  </div>
-      </div>
+    <div class="col-sm-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <img class="card-img-top" src="{% static 'homeimages/snp.png' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">SNPs</h5>
+                    <p class="card-text">Search for SNPS in the database and get information about them.</p>
+                    <a href="{% url 'snpsearch' %}" class="btn btn-primary">Go to SNPS page</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
 
-<!-- row 2 -->
-  <div class="col-sm-3">
-    <div class="card h-100">
-      <div class="card-body">
-          <img class="card-img-top" src="{% static 'homeimages/search.png' %}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Traits/Diseases</h5>
-    <p class="card-text">Search for a specific trait or disease of in our database.</p>
-    <a href="{% url 'diseasesearch' %}" class="btn btn-primary">Go to Traits page</a>
-  </div>
-      </div>
+    <!-- row 2 -->
+    <div class="col-sm-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <img class="card-img-top" src="{% static 'homeimages/search.png' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Traits/Diseases</h5>
+                    <p class="card-text">Search for a specific trait or disease of in our database.</p>
+                    <a href="{% url 'diseasesearch' %}" class="btn btn-primary">Go to Traits page</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card h-100">
-        <img class="card-img-top" src="{% static 'homeimages/diseases.png' %}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">List of all the traits/diseases</h5>
-    <p class="card-text">Quick access the collection of the traits and diseases available in our database.</p>
-    <a href="{% url 'diseaseslist' %}" class="btn btn-primary">Go to Traits List page</a>
+    <div class="col-sm-3">
+        <div class="card h-100">
+            <img class="card-img-top" src="{% static 'homeimages/diseases.png' %}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">List of all the traits/diseases</h5>
+                <p class="card-text">Quick access the collection of the traits and diseases available in our
+                    database.</p>
+                <a href="{% url 'diseaseslist' %}" class="btn btn-primary">Go to Traits List page</a>
 
-  </div>
+            </div>
+        </div>
     </div>
-  </div>
 
 </div>
-
 
 
 </body>

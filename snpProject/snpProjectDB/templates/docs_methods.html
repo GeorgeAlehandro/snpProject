@@ -1,0 +1,67 @@
+<html>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link href="{% static 'css/faq.css' %}" rel="stylesheet">
+<h1 class="text-center"></h1>
+<body>
+<main>
+    <h1 class="faq-heading">Methods</h1>
+    <section class="faq-container">
+        <div class="faq-one">
+            <!-- faq question -->
+            <h1 class="faq-page">From where is the data extracted?</h1>
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>The data is extracted from public scientific <a href="/references/"> articles </a> that study the GWAS associations of the different
+                traits and SNPs as part of population studies.</p>
+            </div>
+        </div>
+        <hr class="hr-line">
+        <div class="faq-two">
+            <!-- faq question -->
+            <h1 class="faq-page">How can I identify strongly related traits/SNPs?</h1>
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>By looking at P-value and choosing the lowest ones for strong associations. ALso checking for the association
+                of this specific SNP to the same trait by checking the SNP page can give the user an idea about the confidence
+                for the repetition of the association of this SNP to the trait.</p>
+            </div>
+        </div>
+        <hr class="hr-line">
+        <div class="faq-three">
+            <!-- faq question -->
+            <h1 class="faq-page">How was this webpage built? </h1>
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>This webpage was built using Django and the queries you see are based on SQLite databases that use the power
+                of Python datatables coupled with Django in order to make the search interactive and server-side.</p>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+<script language="javascript">
+var faq = document.getElementsByClassName("faq-page");
+var i;
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+        /* Toggle between hiding and showing the active panel */
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+
+</script>
+{% endblock %}
+
+</html>

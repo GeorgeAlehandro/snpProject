@@ -3,22 +3,22 @@
 {% block content %}
 {% load static %}
 {% load table_tags %}
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 
-	</head>
-	<body>
-	 <div class="container" style="margin-top: 10px">
-		<h1>SNPs Table</h1>
-		<hr>
-		 <br />
-		{% render_table SNPsfound %}
+</head>
+<body>
+<div class="container" style="margin-top: 10px">
+    <h1>SNPs Table</h1>
+    <hr>
+    <br/>
+    {% render_table SNPsfound %}
 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-	 </div>
-	</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+</div>
+</body>
 {% endblock %}
 

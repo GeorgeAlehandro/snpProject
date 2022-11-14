@@ -1,0 +1,65 @@
+<html>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link href="{% static 'css/faq.css' %}" rel="stylesheet">
+<h1 class="text-center"></h1>
+<body>
+<main>
+    <h1 class="faq-heading">User</h1>
+    <section class="faq-container">
+        <div class="faq-one">
+            <!-- faq question -->
+            <h1 class="faq-page">Why should I sign up as a user? And is it free?</h1>
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p><a href="/register/">Signing up </a>to our website provides the interested users the possibility to submit their own data to our database!
+                Yes it's free and will always be!
+                </p>
+            </div>
+        </div>
+        <hr class="hr-line">
+        <div class="faq-two">
+            <!-- faq question -->
+            <h1 class="faq-page">Will I receive any emails from your side?</h1>
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>Only if we want to notify you about the submission of your data or to discuss it.</p>
+            </div>
+        </div>
+        <hr class="hr-line">
+        <div class="faq-three">
+            <!-- faq question -->
+            <h1 class="faq-page">How can I report a bug?</h1>
+            <!-- faq answer -->
+            <div class="faq-body">
+                <p>By writing to me on my <a href ="https://github.com/GeorgeAlehandro">GitHub</a> </p>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+<script language="javascript">
+var faq = document.getElementsByClassName("faq-page");
+var i;
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+        /* Toggle between hiding and showing the active panel */
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+
+</script>
+{% endblock %}
+
+</html>

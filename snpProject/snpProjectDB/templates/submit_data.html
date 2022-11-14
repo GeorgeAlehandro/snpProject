@@ -1,16 +1,16 @@
 <html>
 {% extends 'base_fixed_footer.html' %}
 {% load static %}
+{% block content %}
 <title>
     Submit your data!
 </title>
-    {% block content %}
 <div class="col-md-12 px-10 py-4">
 </div>
 <p></p>
 <div class="page-header" style="text-align:center">
     <h1>Contribute to our database
-        <img src="{% static 'icon/database.png' %}" width="150" height="150">
+        <img height="150" src="{% static 'icon/database.png' %}" width="150">
     </h1>
 </div>
 
@@ -21,29 +21,30 @@
         </p>
 
         <p style="font-size:20">
-    As a user, you can upload SNPs association data in .txt OR .tsv format. Your submitted data will be verified by our team of engineers which will then integrate your data to ours.
-</p>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <label for="formFileLg" class="form-label"></label>
-      <p style = "text-align:center">
-<input class="form-control form-control-lg" id="formFileLg" type="file" name = "myfile"/>
-          </p>
-    <button type="submit" class="btn btn-lg btn-primary">Upload</button>
-  </form>
+            As a user, you can upload SNPs association data in .txt OR .tsv format. Your submitted data will be verified
+            by our team of engineers which will then integrate your data to ours.
+        </p>
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            <label class="form-label" for="formFileLg"></label>
+            <p style="text-align:center">
+                <input class="form-control form-control-lg" id="formFileLg" name="myfile" type="file"/>
+            </p>
+            <button class="btn btn-lg btn-primary" type="submit">Upload</button>
+        </form>
 
-  {% if uploaded_file_url %}
-    <p style="color:green; font-size:20">File uploaded successfully!
+        {% if uploaded_file_url %}
+        <p style="color:green; font-size:20">File uploaded successfully!
 
-    </p>
+        </p>
         <p style="color:green; font-size:20">Thank you for contributing to our database!
 
-    </p>
-  {% endif %}
-  {% if fail %}
-    <p style="color:red; font-size:20">Upload failure. Please make sure your file format is compatible.</p>
-  {% endif %}
-{% endblock %}
+        </p>
+        {% endif %}
+        {% if fail %}
+        <p style="color:red; font-size:20">Upload failure. Please make sure your file format is compatible.</p>
+        {% endif %}
+        {% endblock %}
     </div>
     <div class="col-md-4"></div>
 </div>

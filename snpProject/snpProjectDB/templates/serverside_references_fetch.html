@@ -2,30 +2,30 @@
 {% extends 'base.html' %}
 {% block content %}
 <head xmlns="">
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 
-	</head>
-	<body>
-		<h1>Rerences Table</h1>
-		<hr>
-		<table id="items-table" class="table table-striped table-bordered" style="width:70%">
-			<thead>
-				<tr>
-					<th>pubmedID</th>
-					<th>Journal</th>
-					<th>Date</th>
-					<th>Title</th>
-					<th>URL</th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
+</head>
+<body>
+<h1>References Table</h1>
+<hr>
+<table id="items-table" class="table table-striped table-bordered" style="width:70%">
+    <thead>
+    <tr>
+        <th>pubmedID</th>
+        <th>Journal</th>
+        <th>Date</th>
+        <th>Title</th>
+        <th>URL</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-		<script language="javascript">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script language="javascript">
 			$(document).ready(function () {
 				var oTable = $('#items-table').dataTable({
 				"processing": true,
@@ -33,7 +33,8 @@
 					"ajax": "/referencesdata/"
 				});
 			});
-		</script>
-	</body>
+
+</script>
+</body>
 {% endblock %}
 

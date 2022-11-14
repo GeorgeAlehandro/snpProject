@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="bring you data update">
+    <list default="true" id="980d6e31-8fe9-4bbc-ba93-0078de01494e" name="Changes" comment="database update">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs_methods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/snpProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/snpProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/even_smaller_file.tsv.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwas_catalog_v1.0-associations_e96_r2019-09-24_european_nature_genetics_100000.tsv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_structure.odt.odp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.v4.odt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProject/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/static/plot/plot.json" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/static/plot/plot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base_fixed_footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/base_fixed_footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/diseases_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/diseases_search_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs_faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/docs_faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/experimental_snp.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/experimental_snp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/formsearch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/formsearch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/genes_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/genes_search_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_diseases_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_genes_snpstoreferencetodisease_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_genes_snpstoreferencetodisease_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_references_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_references_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snps_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snps_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/serverside_snpstoreferencetodisease_fetch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/snp_search_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/submit_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/templates/submit_data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/snpProject/snpProjectDB/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +46,7 @@
       <list>
         <option value="Setup Script" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -33,11 +64,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/home/ubuntu/snpProject/snpProject/snpProjectDB/templates",
-    "settings.editor.selected.configurable": "cn.aprilviolet.highlightbracketpair.AppSettingsConfigurable"
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -231,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668277932819</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="database update">
+      <created>1668281484989</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1668281484989</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,6 +319,7 @@
     <MESSAGE value="FAQ and modifs" />
     <MESSAGE value="filtering based on chrom_pos" />
     <MESSAGE value="bring you data update" />
-    <option name="LAST_COMMIT_MESSAGE" value="bring you data update" />
+    <MESSAGE value="database update" />
+    <option name="LAST_COMMIT_MESSAGE" value="database update" />
   </component>
 </project>

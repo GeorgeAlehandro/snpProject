@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from snpProjectDB.views import homepage, snppage, genespage, DiseasesListView, show_diseases, show_snps, simple_upload, SNPListView, show_snp_result, SNPToDiseaseToReferenceListView, show_snptodiseasetoref_result,show_genes_snptodiseasetoref_result, diseasespage, docs_mainpage, show_references_result,ReferencesListView, docs_faqpage
+from snpProjectDB.views import homepage, snppage, genespage, DiseasesListView, show_diseases, show_snps, simple_upload, SNPListView, show_snp_result, SNPToDiseaseToReferenceListView, show_snptodiseasetoref_result,show_genes_snptodiseasetoref_result, diseasespage, docs_mainpage,docs_methodspage, docs_userpage, show_references_result,ReferencesListView, docs_faqpage
 from register import views as v
 from django.contrib.auth.views import LoginView, LogoutView
 urlpatterns = [
@@ -38,7 +38,8 @@ urlpatterns = [
     path('diseasesearch', diseasespage, name = "diseasesearch"),
     path("docs/faq/", docs_faqpage, name='faq'),
     path("docs/", docs_mainpage, name='docs'),
-
+    path("docs/methods/", docs_methodspage, name='methods'),
+    path("docs/user/", docs_userpage, name='methods'),
     path("submitdata/", simple_upload, name='submit_data'),
     path('referencesdata/', ReferencesListView.as_view(), name='order_references'),
    path("references/", show_references_result, name='references'),
