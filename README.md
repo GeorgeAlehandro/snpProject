@@ -76,6 +76,10 @@ Search SNPs by rsid or by chromosome and positions.
 ### References
 ![Alt Text](https://github.com/GeorgeAlehandro/snpProject/blob/master/screenshots/references.PNG)
 
+
+### Database Architecture
+
+![Alt Text](https://github.com/GeorgeAlehandro/snpProject/blob/master/screenshots/db.png)
 ## Requirements
 Please refer to requirements.txt for the packages used for this project on Python 3.9.
 ## Server versions
