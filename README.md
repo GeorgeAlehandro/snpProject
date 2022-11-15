@@ -11,8 +11,8 @@ Additionally we provide the user the possibility to search by genes, to plot mea
 ## Homepage
 A carousel showcasing the different functionalities of the website, brought to you by Bootstrap.  
 
-![Alt Text]https://github.com/GeorgeAlehandro/snpProject/blob/master/screenshots/homepage1.PNG)
+![Alt Text](https://github.com/GeorgeAlehandro/snpProject/blob/master/screenshots/homepage1.PNG)
 
 Cards with a little bit more info, also from Bootstrap.
 
-![Alt Text]https://github.com/GeorgeAlehandro/snpProject/blob/master/screenshots/homepag2.PNG)
+![Alt Text](https://github.com/GeorgeAlehandro/snpProject/blob/master/screenshots/homepag2.PNG)
