@@ -3,7 +3,7 @@
 ## About this project 
 
 This project was done in the purpose of a course project for a web development and database management course at the University of Aix-Marseille M2-DLAD. 
-The project is **temporarily** available at: http://snpproject-georgealehandro.pythonanywhere.com/.
+The project was available at: http://snpproject-georgealehandro.pythonanywhere.com/.
 ## Purpose
 The goal of this project is to create a website that allows for an interactive search for Single Nucleotide Polymorphisms **SNPs** from a database in a Django-based web framework.  
 The user should also be able to search for **Phenotypes** (aka. traits) and the SNPs related to each one of them.  
@@ -84,5 +84,5 @@ Search SNPs by rsid or by chromosome and positions.
 Please refer to requirements.txt for the packages used for this project on Python 3.9.
 ## Server versions
 One local dev-version with debug On.  
-A temporary online version hosted at pythonanywhere on the following link:  
+A temporary online version was hosted at pythonanywhere on the following link:  
 #### http://snpproject-georgealehandro.pythonanywhere.com/
